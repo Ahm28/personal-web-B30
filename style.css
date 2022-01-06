@@ -387,6 +387,7 @@ select {
   border: 1px solid #c4c4c4;
   border-radius: 8px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .blog-form form .input-blog-image-group label p {
