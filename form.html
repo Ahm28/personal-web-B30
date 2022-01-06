@@ -20,7 +20,6 @@
             <a href="index.html">
                 <img src="assets/logo.png" alt="nav logo">
             </a>
-
             <ul>
                 <li>
                     <a href="index.html">Home</a>
@@ -28,14 +27,12 @@
                 <li>
                     <a href="blog.html">Blog</a>
                 </li>
-            
-
-            
                 <button type="button">
-                    <a href="form.html">Contact me</a>
+                        <a href="form.html">Contact me</a>
                 </button>
-
+            </ul>
         </div>
+
         <div class="right">
             <div class="nav-hamburger" id="nav-hamburger">
                 <input type="checkbox">
@@ -47,60 +44,63 @@
     </nav>
     
 
-    <form method="post">
-        
-        <div>
-            <label for="input-name">Name</label>
-            <input type="text" id="input-name">         
-        </div>
 
-        <div>
-            <label for="input-email">Email</label>
-            <input type="email" name="input-email" id="input-email">
-        </div>
-        
-        <div>
-            <label for="input-phone">Phone Number</label>
-            <input type="number" name="input-phone" id="input-phone" >
-
-        </div>
-
-        <div>
-            <h3>Skills : </h3>
-            <div class="skill" >
-                <input type="checkbox" name="html" id="html" value="html">
-                <label for="html">HTML</label>
-                <input type="checkbox" name="css" id="css" value="css">
-                <label for="css">CSS</label>
+    <div class="container-form">
+        <form method="post">
+            
+            <div>
+                <label for="input-name">Name</label>
+                <input type="text" id="input-name">         
             </div>
-        </div>
-
-        <div>
-            <label for="input-subject">Subject</label>
-            <select name="input-subject" id="input-subject">
-
-                <option value="">Select Option</option>
-                <option value="Privacy Police">Privacy Police</option>
-                <option value="Problem with Our Site">Problem with Our Site</option>
-                <option value="question on order">Question on Order</option>
-                <option value="other question">Other Questions</option>
-            </select>
-
-        </div>
-
-
-        <div>
-            <label for="input-message">Your Message</label>
-            <textarea name="input-message" id="input-message" cols="30" rows="10">
-            </textarea>
-
-        </div>
-
-        <button type="button" onclick="submitData()">
-            Submit
-        </button>
-
-    </form> 
+    
+            <div>
+                <label for="input-email">Email</label>
+                <input type="email" name="input-email" id="input-email">
+            </div>
+            
+            <div>
+                <label for="input-phone">Phone Number</label>
+                <input type="number" name="input-phone" id="input-phone" >
+    
+            </div>
+    
+            <div>
+                <h3>Skills : </h3>
+                <div class="skill" >
+                    <input type="checkbox" name="html" id="html" value="html">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" name="css" id="css" value="css">
+                    <label for="css">CSS</label>
+                </div>
+            </div>
+    
+            <div>
+                <label for="input-subject">Subject</label>
+                <select name="input-subject" id="input-subject">
+    
+                    <option value="">Select Option</option>
+                    <option value="Privacy Police">Privacy Police</option>
+                    <option value="Problem with Our Site">Problem with Our Site</option>
+                    <option value="question on order">Question on Order</option>
+                    <option value="other question">Other Questions</option>
+                </select>
+    
+            </div>
+    
+    
+            <div>
+                <label for="input-message">Your Message</label>
+                <textarea name="input-message" id="input-message" cols="30" rows="10">
+                </textarea>
+    
+            </div>
+    
+            <button type="button" onclick="submitData()">
+                Submit
+            </button>
+    
+        </form> 
+    </div>
 
 
     <div class="container-email " id="container-email">

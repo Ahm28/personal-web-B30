@@ -171,7 +171,7 @@ nav .right .nav-hamburger input {
 }
 
 /* Form Page */
-form {
+.container-form {
   font-weight: bold;
   width: 600px;
   margin: 40px auto;
@@ -180,15 +180,15 @@ form {
   border-radius: 10px;
 }
 
-form label {
+.container-form label {
   margin: 20px 0;
 }
 
-form input[type="text"],
-form input[type="number"],
-form input[type="email"],
-form textarea,
-form select {
+.container-form input[type="text"],
+.container-form input[type="number"],
+.container-form input[type="email"],
+.container-form textarea,
+.container-form select {
   width: 100%;
   background-color: rgb(228, 226, 226);
   border: 1px solid rgb(228, 226, 226);
@@ -200,28 +200,28 @@ form select {
   padding: 5px 10px;
   box-sizing: border-box;
 }
-form textarea {
+.container-form textarea {
   height: 100px;
 }
 
-form input:focus {
+.container-form input:focus {
   background-color: transparent;
 }
 
-form .skill {
+.container-form .skill {
   margin-bottom: 20px;
 }
 
-form select:focus {
+.container-form select:focus {
   background-color: white;
 }
 
-form textarea:focus {
+.container-form textarea:focus {
   background-color: white;
   border: 2px solid #f04c34;
 }
 
-form button {
+.container-form button {
   background-color: #f04c34;
   border: 0;
   width: 40%;
@@ -235,7 +235,7 @@ form button {
   transition: all 0.3s;
 }
 
-form button:hover {
+.container-form button:hover {
   background-color: white;
   color: #f04c34;
   font-weight: bold;
@@ -339,7 +339,12 @@ form button:hover {
 }
 
 .blog-form .form-container {
-  width: 500px;
+  font-weight: bold;
+  width: 600px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  box-shadow: 0 2px 5px;
+  border-radius: 10px;
 }
 
 .blog-form .form-container h1 {
@@ -364,6 +369,7 @@ select {
   background: #f4f3f3;
   border: 1px solid #c4c4c4;
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .blog-form form textarea {
@@ -398,15 +404,24 @@ select {
   text-align: right;
 }
 
-.blog-form form button {
-  margin-top: 50px;
-  padding: 8px 20px;
-  font-size: 17px;
-  background: #ec4d37;
-  border-radius: 8px;
-  border: none;
-  color: #fff;
+.blog-form form .button-group button {
+  background-color: #f04c34;
+  border: 0;
+  width: 25%;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 2px 5px;
   cursor: pointer;
+  color: white;
+  transition: all 0.3s;
+}
+
+.blog-form form .button-group button:hover {
+  background-color: white;
+  color: #f04c34;
+  font-weight: bold;
 }
 
 .blog hr {
@@ -472,6 +487,11 @@ select {
 .blog .blog-list h1 a {
   text-decoration: none;
   color: #000000;
+  transition: all 0.2s;
+}
+
+.blog .blog-list h1 a:hover {
+  color: #f33d21;
 }
 
 .blog .blog-list .detail-blog-content {
@@ -573,5 +593,18 @@ select {
 
   .container .section .right .social-media .icon {
     justify-content: space-evenly;
+  }
+
+  .blog-form .form-container,
+  .container-form {
+    max-width: 80%;
+  }
+
+  .blog .blog-list .blog-list-item {
+    flex-direction: column;
+  }
+
+  .blog .blog-list .btn-group {
+    margin: 20px 0;
   }
 }
