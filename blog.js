@@ -1,33 +1,23 @@
+let blogs = [];
 
-let blogs = []
-
-blogs.reverse()
-
-function addBlog(event){
+function addBlog(event) {
     event.preventDefault()
 
-    let title = document.getElementById('input-blog-title').value
-    let content = document.getElementById('input-blog-content').value
-    let image = document.getElementById('input-blog-image').files
-
+    let title = document.getElementById('input-blog-title').value;
+    let content = document.getElementById('input-blog-content').value;
+    let image = document.getElementById('input-blog-image').files;
     image = URL.createObjectURL(image[0])
 
+
     let blog = {
-        title,
-        content,
-        image,
-        author : 'Ahmad mughni',
-        postAt : new Date()
+        title: title,
+        content: content,
+        image: image
     }
 
     blogs.push(blog)
 
-    title = ''
-    content = ''
-    image = ''
-
-    renderblog()
-
+    renderBlog()
 }
 
 
@@ -45,7 +35,7 @@ function renderblog(){
           <div class="blog-content">
             <div class="btn-group">
               <button class="btn-edit">Edit Post</button>
-              <button class="btn-post">Post Blog</button>
+              <button class="btn-post" onclick="deletePost(${blogs[i].postAt})">Delete Blog</button>
             </div>
             <h1>
               <a href="blog-detail.html" target="_blank"
@@ -126,6 +116,14 @@ function distanceTime(time){
 
         return `${distanceSecond} seconds ago`
       }
+    }
+  }
+}
+
+function deletePost(id){
+  for(let i = 0; i< blogs.length ; i++){
+    if(id === blogs[i].postAt){
+      blogs.splice(i,1)
     }
   }
 }
