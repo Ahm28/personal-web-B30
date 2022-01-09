@@ -40,7 +40,7 @@ function renderBlog() {
         <div class="blog-content">
           <div class="btn-group">
             <button class="btn-edit">Edit Post</button>
-            <button class="btn-post">Post Blog</button>
+            <button class="btn-post" onclick="deletePost(${blogs[i].postAt})">Delete post</button>
           </div>
           <h1>
             <a href="blog-detail.html" target="_blank"
@@ -177,7 +177,6 @@ function deletePost(id){
   }
 }
 
-// untuk menjalankan function render blog setiap 3 detik
 setInterval(() => {
   renderBlog()
 }, 1000)
